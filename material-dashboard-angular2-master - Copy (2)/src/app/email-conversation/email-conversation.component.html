@@ -1,0 +1,57 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Compose Email</h4>
+                      <p class="card-category">New Message</p>
+                  </div>
+                  <div class="card-body">
+                      <form >
+                        <div class="row">
+                          <div class="col-md-8">
+                            <label>To:</label>
+                            <mat-form-field class="example-full-width">
+                              <input matInput type="email" required>
+                          </mat-form-field>
+                            </div> 
+                            <div class="col-md-4">
+                              <mat-form-field>
+                                <label>User</label>
+                               
+                                <select matNativeControl required>
+                                  <option value="TPO">TPO</option>
+                                  <option value="Sub-TPO">Sub-Tpo</option>
+                                  <option value="Company">Company</option>
+                                  <option value="Admin">Admin</option>
+                                </select>
+                              </mat-form-field>
+                            </div> 
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Subject</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="text">
+                            </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12">
+                          <label>Description</label>
+                          <mat-form-field class="example-full-width">
+                              <textarea matInput placeholder="Write Description Here..."></textarea>
+                          </mat-form-field>
+                          </div>
+                        </div>
+                        <button mat-raised-button type="submit" class="btn btn-primary">Send</button>
+                      <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>

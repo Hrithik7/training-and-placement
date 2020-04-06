@@ -1,0 +1,67 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Student Registration</h4>
+                      <p class="card-category">Add Student</p>
+                  </div>
+                  <div class="card-body">
+                      <form (ngSubmit)="addstudent(studentForm)" #studentForm="ngForm">
+
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="First Name" name="firstname" ngModel   type="text">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Last Name" name="lastname" ngModel   type="text">
+                                </mat-form-field>
+                            </div>
+                              
+                          </div>
+                          <div class="row">
+                              
+                              <div class="col-md-8">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Enrollment No." ngModel name="enrollementno" type="number">
+                                  </mat-form-field>
+                                </div>    
+                          </div>
+                          <div class="row">
+                              <div class="col-md-8">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Email address" ngModel name="email" type="email">
+                              </mat-form-field>
+                              </div>
+                              
+                          </div>
+                          <div class="row">
+                              <div class="col-md-8">
+                                
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Temporary Password" name="temppass" ngModel type="password">
+                                  </mat-form-field>
+                              </div>   
+                          </div>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Mobile No." type="number" name="mobileno" ngModel maxlength="10">
+                              </mat-form-field>
+                          </div>
+                          </div>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Submit</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+

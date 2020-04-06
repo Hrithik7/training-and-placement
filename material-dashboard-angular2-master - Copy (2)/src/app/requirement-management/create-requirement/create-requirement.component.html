@@ -1,0 +1,95 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Create Requirement</h4>
+            <p class="card-category"></p>
+          </div>
+          <div class="card-body">
+            <form>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Job Title" name="jobtitle" ngModel type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Expierence(in Years) required" name="expierence" ngModel type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="type" name="type" ngModel type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <!-- <div class="col-md-5">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Company (disabled)" disabled>
+                                    </mat-form-field>
+                                </div> -->
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" placeholder="Primary Skills" name="primarySkills" ngModel />
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Education Requirement" name="educationRequirement" ngModel type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+               
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Location" name="location" ngModel >
+                  </mat-form-field>
+                </div>
+                 <div class="col-md-4">
+                   <mat-form-field>
+                     <input matInput [matDatepicker]="frompicker" name="datefrom" ngModel placeholder="From Date:">
+                     <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+                     <mat-datepicker #frompicker></mat-datepicker>
+                    </mat-form-field>
+                 </div>
+                  <div class="col-md-4">
+                    <mat-form-field>
+                      <input matInput [matDatepicker]="topicker" name="dateto" ngModel placeholder="Till Date:">
+                      <mat-datepicker-toggle matSuffix [for]="topicker"></mat-datepicker-toggle>
+                      <mat-datepicker #topicker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label>Description</label>
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput name="description" ngModel placeholder="Write Description Here..."></textarea>
+                  </mat-form-field>
+                  <!-- <div class="form-group">
+  
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                            <textarea class="form-control" rows="5"></textarea>
+                                        </div>
+                                    </div> -->
+                </div>
+              </div>
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Submit
+                Requirement</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

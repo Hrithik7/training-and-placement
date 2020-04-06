@@ -1,0 +1,120 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Questions</h4>
+                      <p class="card-category">Add Questions with Answer</p>
+                  </div>
+                  <div class="card-body">
+                    <div *ngFor="let item of formDataList;let i = index;">
+                      <form >
+                        <div class="row">
+                          <div class="col-md-8">
+                            <label>Enter a Question</label>
+                            <mat-form-field class="example-full-width">
+                              <input matInput type="text" [(ngModel)]="item.quesname" name="quesname" required>
+                          </mat-form-field>
+                            </div> 
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <label>Option 1</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput [(ngModel)]="item.option1" name="option1" type="text">
+                            </mat-form-field>
+                            </div>
+                            <div class="col-md-5">
+                              <label>Option 2</label>
+                              <mat-form-field class="example-full-width">
+                                  <input matInput type="text" [(ngModel)]="item.option2" name="option2">
+                              </mat-form-field>
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <label>Option 3</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="text" [(ngModel)]="item.option3" name="option3">
+                            </mat-form-field>
+                            </div>
+                            <div class="col-md-5">
+                              <label>Option 4</label>
+                              <mat-form-field class="example-full-width">
+                                  <input matInput type="text" [(ngModel)]="item.option4" name="option4">
+                              </mat-form-field>
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <label>Answer</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="text" [(ngModel)]="item.answer" name="answer">
+                            </mat-form-field>
+                            </div>
+                        </div>
+                        <button mat-raised-button  class="btn btn-danger" (click)="removeItem(item)"> remove </button>
+                       
+                      </form>
+                    </div>
+                 
+                  <form  >
+                    <div class="row">
+                      <div class="col-md-8">
+                        <label>Enter a Question</label>
+                        <mat-form-field class="example-full-width">
+                          <input matInput type="text" [(ngModel)]="data.quesname" name="quesname" required>
+                      </mat-form-field>
+                        </div> 
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label>Option 1</label>
+                        <mat-form-field class="example-full-width">
+                            <input matInput [(ngModel)]="data.option1" type="text" name="option1">
+                        </mat-form-field>
+                        </div>
+                        <div class="col-md-5">
+                          <label>Option 2</label>
+                          <mat-form-field class="example-full-width">
+                              <input matInput type="text" [(ngModel)]="data.option2" name="option2">
+                          </mat-form-field>
+                          </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label>Option 3</label>
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" [(ngModel)]="data.option3" name="option3">
+                        </mat-form-field>
+                        </div>
+                        <div class="col-md-5">
+                          <label>Option 4</label>
+                          <mat-form-field class="example-full-width">
+                              <input matInput type="text" [(ngModel)]="data.option4" name="option4">
+                          </mat-form-field>
+                          </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label>Answer</label>
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" [(ngModel)]="data.answer" name="answer">
+                        </mat-form-field>
+                        </div>
+                    </div>
+                    <button (click)="addItem(data)" class="btn btn-primary"> Add multiple Questions </button>
+                    
+                  <div class="clearfix">
+                    <button mat-raised-button type="submit" class="btn btn-danger">Submit</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+

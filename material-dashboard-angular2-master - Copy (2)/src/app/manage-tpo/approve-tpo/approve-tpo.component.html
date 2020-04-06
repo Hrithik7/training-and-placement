@@ -1,0 +1,44 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Approved TPO</h4>
+            <p class="card-category">All the Approved TPO which represent Colleges are Mentioned here</p>
+          </div>
+          <div class="card-body table-responsive">
+            <div class="row">
+              <div class="col-md-5">
+                <mat-form-field class="example-full-width">
+                    <input matInput type="text" [(ngModel)]="searchText" placeholder="Search" name="search-text">
+                </mat-form-field>
+                </div>
+            </div>
+            <table class="table table-hover">
+              <thead class="text-danger">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Moble No</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Change Status</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let c of list |filter:searchText |paginate:{itemPerPage:10,currentPage:p}; let i = index">
+                  <td>{{(p-1)*10+i+1}}</td>
+                  <td>{{c.fullname}}</td>
+                  <td>{{c.mobile_no}}</td>
+                  <td>{{c.address}}</td>
+                  <td>{{c.status}}</td>
+                  <td><button class="btn btn-outline-danger" (click)=changestatus(c._id)>Reject</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Examination</h4>
+                      <p class="card-category">Create New Exam</p>
+                  </div>
+                  <div class="card-body">
+                   
+                      <form >
+                        <div class="row">
+                          <div class="col-md-5">
+                           
+                            <mat-form-field>
+                              <label>Exam Type</label>
+                             
+                              <select matNativeControl required>
+                                <option value="Aptitude test">Apititude Test</option>
+                                <option value="Reasoning">Reasoning</option>
+                                <option value="English">English</option>
+                              </select>
+                            </mat-form-field>
+                            </div> 
+                          
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <label>Total No. of Questions</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput ngModel name="totalques" type="text">
+                            </mat-form-field>
+                            </div>
+                            <div class="col-md-5">
+                              <label>Total Time(in Minutes)</label>
+                              <mat-form-field class="example-full-width">
+                                  <input matInput type="text" ngModel name="totaltime">
+                              </mat-form-field>
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <label>Passing Marks</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="text" ngmodel name="passingmarks">
+                            </mat-form-field>
+                            </div>
+                            <div class="col-md-5">
+                              <label>Date of Examination</label>
+                              <mat-form-field>
+                                <input matInput [matDatepicker]="picker" name="date" placeholder="Date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <mat-form-field>
+                              <label>Status</label>
+                             
+                              <select matNativeControl required>
+                                <option value="Active">Active</option>
+                                <option value="Pending">Pending</option>
+                              </select>
+                            </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                          <button mat-raised-button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                      </form>
+
+                    </div>
+                
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
